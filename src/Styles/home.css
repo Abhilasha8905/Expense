@@ -7,3 +7,10 @@
   margin-left: 150px;
   background-color: cadetblue;
 }
+
+.delete {
+  cursor: pointer;
+}
+.delete:hover {
+  background-color: #ddd;
+}

@@ -8,22 +8,26 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ul>
-          <li>
-            <button>
-              <Link to="/home">Home</Link>
-            </button>
-          </li>
-          <li>
-            <button>
-              <Link to="/settings">Settings</Link>
-            </button>
-          </li>
-        </ul>
-        <Route path="/" component={App}>
-          <Route path="/home" component={Home} />
-          <Route path="/settings" component={Settings} />
-        </Route>
+        <div className="col-md-3">
+          <ul>
+            <li>
+              <button>
+                <Link to="/home">Home</Link>
+              </button>
+            </li>
+            <li>
+              <button>
+                <Link to="/settings">Settings</Link>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div className="col-md-9">
+          <Route path="/home" component={App}>
+            <Route path="/home" component={Home} />
+            <Route path="/settings" component={Settings} />
+          </Route>
+        </div>
       </div>
     </Router>
   );
