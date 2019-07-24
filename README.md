@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Simple React App to Add and Delete Expenses.
+
+
+To run locally :- 1). clone the project 2) run 'yarn' or 'npm i' to install dependencies. 3). 'yarn start' or 'npm start' to launch the application.
+
 
 ## Available Scripts
 
