@@ -1,10 +1,8 @@
 import React from "react";
 import { Component } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import "../Styles/home.css";
 import TextField from "@material-ui/core/TextField";
-
 import DeleteIcon from "@material-ui/icons/Delete";
 
 class Home extends Component {
@@ -26,14 +24,16 @@ class Home extends Component {
       category: category,
       item: item,
       expense: expense,
-      date: new Date().toLocaleString()
+      date: new Date().toLocaleString(),
+      disable: true
     };
     const newExpenses = [...expenses, exp];
     this.setState({
       expenses: newExpenses,
       category: "",
       item: "",
-      expense: ""
+      expense: "",
+      disable: true
     });
   }
 
@@ -69,10 +69,30 @@ class Home extends Component {
                 <tbody>
                   {expenses.map(exp => (
                     <tr>
-                      <td>{exp.category}</td>
-                      <td>{exp.item}</td>
-                      <td>{exp.expense}</td>
-                      <td>{exp.date}</td>
+                      <td>
+                        <TextField
+                          value={exp.category}
+                          disabled={this.state.disable}
+                        />
+                      </td>
+                      <td>
+                        <TextField
+                          value={exp.item}
+                          disabled={this.state.disable}
+                        />
+                      </td>
+                      <td>
+                        <TextField
+                          value={exp.expense}
+                          disabled={this.state.disable}
+                        />
+                      </td>
+                      <td>
+                        <TextField
+                          value={exp.date}
+                          disabled={this.state.disable}
+                        />
+                      </td>
                       <td>
                         <DeleteIcon
                           className="delete"

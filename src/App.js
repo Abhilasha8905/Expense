@@ -23,7 +23,7 @@ function App() {
           </ul>
         </div>
         <div className="col-md-9">
-          <Route path="/home" component={App}>
+          <Route path="/" component={App}>
             <Route path="/home" component={Home} />
             <Route path="/settings" component={Settings} />
           </Route>
